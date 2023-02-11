@@ -16,5 +16,5 @@ permissions:
   pull-requests: read
 
 jobs:
-  check:
+  prioritization:
     uses: whichlicense/.github/.github/workflows/moscow.yml@main
