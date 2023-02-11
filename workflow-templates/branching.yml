@@ -1,0 +1,18 @@
+#
+# Copyright (c) 2023 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/whichlicense/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: Branch Convention
+
+on:
+  pull_request:
+    types: [ opened, reopened ]
+
+permissions:
+  pull-requests: read
+
+jobs:
+  branching:
+    uses: whichlicense/.github/.github/workflows/branching.yml@main

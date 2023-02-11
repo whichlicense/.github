@@ -1,0 +1,23 @@
+#
+# Copyright (c) 2023 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/whichlicense/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: Branch Convention
+
+on:
+  workflow_call:
+
+permissions:
+  pull-requests: read
+
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: duart38/branch-convention-check@v2.1.0
+        with:
+          standard_branch_check: '(\b(?:fix|feat|ci|patch)\b(-([0-9])+|)\b(?:-[a-z0-9]{3,})+\b)'
+          ignore_branch_check: '(dependabot\/.*)'
+          ignore: 'main'

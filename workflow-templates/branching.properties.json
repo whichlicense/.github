@@ -1,0 +1,8 @@
+{
+    "name": "Branch Convention Organization Workflow",
+    "description": "The reusable Branch Convention enforcement Organization CI workflow.",
+    "iconName": "octicon git-branch",
+    "categories": [
+        "continuous-integration"
+    ]
+}
