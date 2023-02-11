@@ -17,4 +17,4 @@ permissions:
 
 jobs:
   check:
-    uses: whichlicense/.github/.github/workflows/moscow.yml@$default-branch
+    uses: whichlicense/.github/.github/workflows/moscow.yml@main
