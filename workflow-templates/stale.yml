@@ -1,0 +1,21 @@
+#
+# Copyright (c) 2023 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/whichlicense/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: Stale Marker
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    uses: whichlicense/.github/.github/workflows/stale.yml@main

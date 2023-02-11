@@ -1,0 +1,8 @@
+{
+    "name": "Stale Marker Organization Workflow",
+    "description": "The reusable Stale Marker Organization CI workflow.",
+    "iconName": "octicon play",
+    "categories": [
+        "continuous-integration"
+    ]
+}

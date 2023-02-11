@@ -1,0 +1,26 @@
+#
+# Copyright (c) 2023 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/whichlicense/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: Stale Marker
+
+on:
+  workflow_call:
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/stale@v7
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: 'This issue was marked as stale.'
+          stale-pr-message: 'This pull request was marked as stale.'
+          stale-issue-label: 'stale'
+          stale-pr-label: 'stale'
