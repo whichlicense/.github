@@ -1,0 +1,8 @@
+{
+    "name": "MoSCoW Prioritization Organization Workflow",
+    "description": "The reusable MoSCoW Prioritization Organization CI workflow.",
+    "iconName": "octicon check-circle",
+    "categories": [
+        "continuous-integration"
+    ]
+}

@@ -7,7 +7,8 @@
 name: MoSCoW Prioritization
 
 on:
-  workflow_call:
+  pull_request_target:
+    types: [ labeled, opened, unlabeled, reopened ]
 
 permissions:
   contents: read
@@ -16,6 +17,4 @@ permissions:
 
 jobs:
   check:
-    runs-on: ubuntu-22.04
-    steps:
-      - uses: grevend/moscow-prioritization@v2.0.0
+    uses: whichlicense/.github/.github/workflows/moscow.yml@$default-branch
