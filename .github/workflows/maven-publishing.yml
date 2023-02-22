@@ -36,4 +36,6 @@ jobs:
           build-root-directory: ${{ inputs.root-directory }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PKG_SIGNING_KEY: ${{ secrets.PKG_SIGNING_KEY }}
+          PKG_SIGNING_PW: ${{ secrets.PKG_SIGNING_PW }}
           CI: true
