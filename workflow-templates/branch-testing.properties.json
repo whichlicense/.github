@@ -1,0 +1,8 @@
+{
+    "name": "Test Branch Organization Workflow",
+    "description": "The reusable Test Branch Organization CI workflow.",
+    "iconName": "octicon beaker",
+    "categories": [
+        "continuous-integration"
+    ]
+}

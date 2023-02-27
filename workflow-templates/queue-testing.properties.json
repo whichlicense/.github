@@ -1,0 +1,8 @@
+{
+    "name": "Test Queue Organization Workflow",
+    "description": "The reusable Test Queue Organization CI workflow.",
+    "iconName": "octicon beaker",
+    "categories": [
+        "continuous-integration"
+    ]
+}
