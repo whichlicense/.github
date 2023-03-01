@@ -36,7 +36,7 @@ jobs:
       - uses: graalvm/setup-graalvm@v1
         if: (contains(inputs.distribution, 'graalvm'))
         with:
-          version: '22.3.0'
+          version: '22.3.1'
           java-version: ${{ inputs.version }}
           components: 'native-image'
           cache: 'gradle'
