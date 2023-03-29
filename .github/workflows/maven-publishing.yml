@@ -38,4 +38,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PKG_SIGNING_KEY: ${{ secrets.PKG_SIGNING_KEY }}
           PKG_SIGNING_PW: ${{ secrets.PKG_SIGNING_PW }}
+          OSSRH_USER: ${{ secrets.OSSRH_USER }}
+          OSSRH_PW: ${{ secrets.OSSRH_PW }}
           CI: true
