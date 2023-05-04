@@ -1,0 +1,9 @@
+{
+    "name": "Maven Publishing (Next) Organization Workflow",
+    "description": "The reusable Maven Publishing (Next) Organization CI workflow.",
+    "iconName": "octicon box",
+    "categories": [
+        "continuous-integration",
+        "continuous-delivery"
+    ]
+}

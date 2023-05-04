@@ -1,0 +1,43 @@
+#
+# Copyright (c) 2023 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/whichlicense/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: Maven Publishing Next
+
+on:
+  workflow_call:
+    inputs:
+      root-directory:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  gradle:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '20'
+          cache: 'gradle'
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@v1
+      - name: Publish package
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: publish
+          build-root-directory: ${{ inputs.root-directory }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PKG_SIGNING_KEY: ${{ secrets.PKG_SIGNING_KEY }}
+          PKG_SIGNING_PW: ${{ secrets.PKG_SIGNING_PW }}
+          OSSRH_USER: ${{ secrets.OSSRH_USER }}
+          OSSRH_PW: ${{ secrets.OSSRH_PW }}
+          CI: true
