@@ -27,7 +27,7 @@ jobs:
         working-directory: ${{ inputs.directory }}
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-java@v3
+      - uses: actions/setup-java@v4
         if: (!contains(inputs.compilation, 'aot') && !contains(inputs.distribution, 'graalvm'))
         with:
           distribution: ${{ inputs.distribution }}
